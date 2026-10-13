@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env*
+accounts.json
+config.ini
+*.log
+
+# Private databases and SQLite sidecars must never be published.
+*.db
+*.db-*
+*.sqlite*

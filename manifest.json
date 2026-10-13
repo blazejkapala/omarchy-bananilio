@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "banan.bananilio",
+  "name": "Bananilio",
+  "version": "0.1.0",
+  "author": "banan",
+  "license": "MIT",
+  "description": "Twilio SMS in the Omarchy bar: inbox, sent messages, replies, multiple accounts and numbers, with local configuration and a private demo mode.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Bananilio",
+    "description": "Read and send SMS through your Twilio accounts.",
+    "category": "Communication",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 30,
+      "notifyNewMessages": true,
+      "demo": false,
+      "defaultCountry": "PL"
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Check messages every N seconds",
+        "min": 15,
+        "max": 600,
+        "defaultValue": 30
+      },
+      {
+        "key": "notifyNewMessages",
+        "type": "boolean",
+        "label": "Notify about new SMS without displaying their content",
+        "defaultValue": true
+      },
+      {
+        "key": "demo",
+        "type": "boolean",
+        "label": "Use fictional data; never access credentials or send real messages",
+        "defaultValue": false
+      },
+      {
+        "key": "defaultCountry",
+        "type": "string",
+        "label": "Default recipient country (ISO code)",
+        "defaultValue": "PL"
+      }
+    ]
+  }
+}
